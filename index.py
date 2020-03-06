@@ -8,7 +8,7 @@ index_page = Blueprint('index_page', __name__,
 @index_page.route('/index')
 @index_page.route('/')
 def index():
-    body_string = "Welcome, we are a small team of developers. Our games are passion projects. While our games are a way from public viewing, we hope you'll like our many offerings."
+    body_string = "Welcome, we are a small team of developers. Our games are passion projects. While our games are a way from public viewing, we hope you'll like our many offerings. We're currelty building this place, so please don't' mind the dust."
     return render_template('index.html', title="Index", body=body_string.replace('\n', '<br>'))
 
 
