@@ -9,9 +9,12 @@
 <body>
 <div class="wrapper">
     <header>
+       <img id="title_image" src="{{url_for('static', filename='swiftfoxv1.png')}}" align="middle"/>
+        <!-- <img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="left"/> -->
         <a href="/index">Home</a>
         <a href="/about">about</a>
         <a href="/try_it">Try it!</a>
+        <img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="center"/>
     </header>
     <main>{{ body|safe }}</main>
     <footer>Copyright 2020 :D</footer>
