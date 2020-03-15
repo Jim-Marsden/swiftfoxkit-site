@@ -23,3 +23,34 @@ def about():
 def try_it():
     body_string = "Sorry, we don't have anything just yet. :c"
     return render_template('index.html', title="try it", body=body_string.replace('\n', '<br>'))
+
+
+@index_page.route('/thanks')
+def thanks():
+    body_string = """We would like to thank the following people:
+    <br>
+            From Jim:
+    <ul>"""
+
+    people_to_thank_jim = {"Keeva" : "Putting up with me",
+                       "Insula": "All of the art, and helping me focus",
+                       "Nyletak": "Getting the art started", }
+
+    people_to_thank_insula = {
+        "Valsharen": "being a supportive spouse",
+        "Browncoat": "giving the best worst ideas"
+    }
+
+    for x, y in people_to_thank_jim.items():
+        body_string += "\n\t\t"
+        body_string += F"<li> {x} for {y.lower()}</li>"
+
+    body_string += "</ul> \n        From Insula: <ul>"
+
+    for x, y in people_to_thank_insula.items():
+        body_string += "\n"
+        body_string += F"<li> {x} for {y.lower()}</li>"
+
+
+    return render_template('index.html', title="Thanks", body=body_string)
+

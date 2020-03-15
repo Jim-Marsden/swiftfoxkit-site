@@ -4,20 +4,21 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <title>{{title}} - Swiftfox Kit</title>
 </head>
-<body>
-<div class="wrapper">
-    <header>
-       <img id="title_image" src="{{url_for('static', filename='swiftfoxv1.png')}}" align="middle"/>
-        <!-- <img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="left"/> -->
-        <a href="/index">Home</a>
-        <a href="/about">about</a>
-        <a href="/try_it">Try it!</a>
-        <img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="center"/>
-    </header>
-    <main>{{ body|safe }}</main>
-    <footer>Copyright 2020 :D</footer>
-</div>
-</body>
+    <body>
+        <div class="wrapper">
+            <header>
+               <img id="title_image" src="{{url_for('static', filename='swiftfoxv1.png')}}" align="middle"/>
+                <!-- <img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="left"/> -->
+                <a href="/index">Home</a>
+                <a href="/about">about</a>
+                <a href="/try_it">Try it!</a>
+                <a href="/thanks"> Gratitude </a>
+                <!--<img id="title_image_text" src="{{ url_for('static', filename= "swiftfoxkit.png")}}" align="center"/> -->
+            </header>
+            <main>{{ body|safe }}</main>
+            <footer>Copyright 2020 :D</footer>
+        </div>
+    </body>
 </html>
