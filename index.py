@@ -14,8 +14,16 @@ def index():
 
 @index_page.route('/about')
 def about():
-    body_string = "Jim Marsden - Programming\nInsula - Art, Game Design\nDivi - Game Design, Quality Assurance"
-    return render_template('index.html', title="About", body=body_string.replace('\n', '<br>'))
+    github_link = '<a href="https://github.com/Jim-Marsden/Purrmaid"> Purrmaid </a>'
+
+
+    project = f"""We use our own game engine {github_link}
+    While we don't have much in the way of details on our first project public at the moment, it will be a retail focused game."""
+    team = "The team: Jim Marsden - Programming\nInsula - Art, Game Design\nDivi - Game Design, Quality Assurance"
+
+
+    return render_template('about.html', title="About", team_header="Our team:", project_header="Our projects:",
+                           project_body=project.replace('\n', '<br>'), team_body=team.replace('\n', '<br>'))
 
 
 
@@ -53,4 +61,6 @@ def thanks():
 
 
     return render_template('index.html', title="Thanks", body=body_string)
+
+
 

@@ -11,19 +11,27 @@ body {
     font-family: 'Press Start 2P', cursive;
 }
 
-
 a{
-    text-decoration: none;
     color: #FFEA6A;
-    border: 5px solid black;
-    background-color: black;
 }
 
-a:hover {
+h1{
+    align-self: center;
+    align-content: center;
+}
+
+#header_link{
+    text-decoration: none;
+    color: #FFEA6A;
+    border: 5px solid #666666;
+    background-color:  #666666;
+}
+
+#header_link:hover {
         border: 5px solid #FFEA6A;
 
       background-color: #FFEA6A;
-    color: black;
+    color:  #666666;
 }
 
 #content {
